@@ -7,7 +7,7 @@ describe "As a logged in user" do
       #create test object
       # omniauth.stub or Faker::Omniauth.github
 
-      visit "/#{user.username}"
+      visit "/#{user.username}" #will need to slug this
       expect(page).to have_content("Repositories 42")
     end
   end

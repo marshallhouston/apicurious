@@ -1,3 +1,6 @@
 <%= current_user.username %>
 
-<%= image_tag @parsed_user['avatar_url'], alt: "Profile picture for#{current_user.username}" %>
+<%= image_tag @parsed_user['avatar_url'], alt: "Profile picture for #{current_user.username}" %>
+<%= link_to "Repositories #{@parsed_user['public_repos']}", @parsed_user["repos_url"]%>
+<%= link_to "Followers #{@parsed_user['followers']}", @parsed_user["followers_url"]%>
+<%= link_to "Following #{@parsed_user['following']}", @parsed_user["following_url"]%>
