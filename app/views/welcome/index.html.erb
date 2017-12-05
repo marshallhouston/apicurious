@@ -1,1 +1,5 @@
-<%= link_to "Login with Github", github_login_path %>
+<% if current_user %>
+  <p> Welcome <%= current_user.username %> </p>
+<% else %>
+  <%= link_to "Login with Github", github_login_path %>
+<% end %>
