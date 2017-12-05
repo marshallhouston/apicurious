@@ -5,6 +5,7 @@ describe "As an authenticated user" do
     it "my user github information" do
 
       #create test object
+      
       # omniauth.stub or Faker::Omniauth.github
 
       # As an authenticated user,
@@ -30,7 +31,7 @@ describe "As an authenticated user" do
       within(".following") do
         expect(page).to have_content("Following 2")
       end
-      
+
       visit "/#{user.username}" #will need to slug this
     end
   end
