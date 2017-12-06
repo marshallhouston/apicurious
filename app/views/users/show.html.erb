@@ -1,5 +1,5 @@
 <div class="profile_picture">
-  <%= image_tag @github_user.picture, alt: "#{@github_user.username}'s profile picture" unless @github_user.picture.blank? %>
+  <%= image_tag(@github_user.picture, alt: "#{@github_user.username}'s profile picture", class: 'img')%>
 </div>
 
 <div class="user_info">

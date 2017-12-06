@@ -6,11 +6,14 @@ class User < ApplicationRecord
       new_user.username           = auth_info.extra.raw_info.login
       new_user.token              = auth_info.credentials.token
     end
-    if user.token != auth_info.credentials.token
-      user.token = auth_info.credentials.token
-      user.save
-    end
+    verify_token(user, auth_info)
     user
+  end
+
+  def self.verify_token(user, auth_info)
+    if user.token != auth_info.credentials.token
+      user.update(token: auth_info.credentials.token)
+    end
   end
 end
 
@@ -21,3 +24,9 @@ end
 #     new_user.token              = auth_info.credentials.token
 #   end
 # end
+
+# if user.token != auth_info.credentials.token
+#   user.token = auth_info.credentials.token
+#   user.save
+# end
+# user

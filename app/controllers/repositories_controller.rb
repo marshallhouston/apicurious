@@ -16,3 +16,4 @@ class RepositoriesController < ApplicationController
     @github_service ||= GithubService.new(current_user.token, current_user.username)
   end
 end
+  
