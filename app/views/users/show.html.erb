@@ -3,6 +3,9 @@
 </div>
 
 <div class="user_info">
+  <div class="username">
+    <h2> Welcome, <%= current_user.username %> </h2>
+  </div>
   <div class="repositories">
   <p><%= link_to "Repositories", user_repositories_path(current_user) %> <%= @github_user.repository_count %></p>
   </div>

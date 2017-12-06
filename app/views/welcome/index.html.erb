@@ -1,9 +1,4 @@
 <% if current_user %>
   <p> Welcome <%= current_user.username %> </p>
-<% else %>
-  <%= link_to "Login with Github", github_login_path %>
-<% end %>
-<% if current_user %>
-  <%= link_to "Logout", logout_path, method: :delete %>
   <%= link_to "Profile", user_path(current_user) %>
 <% end %>

@@ -9,6 +9,13 @@
   </head>
 
   <body>
+    <nav>
+      <% if current_user %>
+        <%= link_to "Logout", logout_path, method: :delete %>
+      <% else %>
+        <%= link_to "Login with Github", github_login_path %>
+      <% end %>
+    </nav>
     <%= yield %>
   </body>
 </html>

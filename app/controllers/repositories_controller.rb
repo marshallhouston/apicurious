@@ -9,11 +9,10 @@ class RepositoriesController < ApplicationController
   private
 
   def github_repositories
-    github_service.all_repositories
+    github_service.user_repos
   end
 
   def github_service
     @github_service ||= GithubService.new(current_user.token, current_user.username)
   end
 end
-  
