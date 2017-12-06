@@ -9,7 +9,7 @@ class GithubUser
 
   def initialize(attrs = {})
     @username = attrs[:login]
-    @picture = attrs[:avatar_url]
+    # @picture = attrs[:avatar_url]
     @repository_count = attrs[:public_repos]
     @number_of_followers = attrs[:followers]
     @following_other_users_count = attrs[:following]
