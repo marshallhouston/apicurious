@@ -1,6 +1,18 @@
-<%= current_user.username %>
+<div class="profile_picture">
+  <%= image_tag @github_user.picture, alt: "#{@github_user.username}'s profile picture" unless @github_user.picture.blank? %>
+</div>
 
-<%= image_tag @parsed_user['avatar_url'], alt: "Profile picture for #{current_user.username}" %>
-<%= link_to "Repositories #{@parsed_user['public_repos']}", @parsed_user["repos_url"]%>
-<%= link_to "Followers #{@parsed_user['followers']}", @parsed_user["followers_url"]%>
-<%= link_to "Following #{@parsed_user['following']}", @parsed_user["following_url"]%>
+<div class="user_info">
+  <div class="repositories">
+    <p>Repositories <%= @github_user.repository_count %></p>
+  </div>
+  <div class="starred_repos">
+    <p>Starred <%= @github_user.starred_repo_count %></p>
+  </div>
+  <div class="followers">
+    <p>Followers <%= @github_user.number_of_followers %></p>
+  </div>
+  <div class="following">
+    <p>Following <%= @github_user.following_other_users_count %></p>
+  </div>
+</div>
