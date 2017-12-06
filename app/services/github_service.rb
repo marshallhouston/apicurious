@@ -15,4 +15,9 @@ class GithubService
     JSON.parse(response.body, symbolize_names: true)
   end
 
+  def all_repositories
+    response = Faraday.get("https://api.github.com/users/#{@username}/repos?access_token=#{@token}")
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
 end

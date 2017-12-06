@@ -1,0 +1,11 @@
+<div class="repositories repositories-container">
+  <ul class="repositories-list">
+    <% @repositories.each do |repository| %>
+    <div class="repository-details">
+      <li class="repo-name"> <%=link_to "#{repository.name}", url_for("http://github.com/#{current_user.username}/#{repository.name}") %></li>
+      <li class="repo-language"> <%= repository.language %></li>
+      <li class="last-updated"> <%= repository.last_updated  %></li>
+    </div>
+    <% end %>
+  </ul>
+</div>
