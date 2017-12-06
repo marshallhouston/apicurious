@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe "As an authenticated user" do
   describe "when I visit my profile page" do
-    it "my user github information" do
+    it "I see my user github information" do
       # As an authenticated user,
       user = create :user
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
