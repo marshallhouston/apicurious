@@ -4,7 +4,7 @@ class UsersController < ApplicationController
 
   def show
     @github_user = github_user
-    @github_user.add_starred_repo_info
+    @github_user.add_starred_repos(github_service.starred_repos)
   end
 
   private
@@ -18,7 +18,7 @@ class UsersController < ApplicationController
   end
 
   def github_service
-    @github_service ||= GithubService.new(current_user.token)
+    @github_service ||= GithubService.new(current_user.token, current_user.username)
   end
 end
 

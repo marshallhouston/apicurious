@@ -14,9 +14,6 @@ class User < ApplicationRecord
   end
 end
 
-### may need to figure out how to refresh expired tokens
-
-
 # def self.from_omniauth(auth_info)
 #   find_or_create_by(uid: auth_info[:uid]) do |new_user|
 #     new_user.uid                = auth_info.uid

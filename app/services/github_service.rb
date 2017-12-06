@@ -1,6 +1,7 @@
 class GithubService
 
-  def initialize(token)
+  def initialize(token, username)
+    @username = username
     @token = token
   end
 
@@ -10,8 +11,8 @@ class GithubService
   end
 
   def starred_repos
-    response = Faraday.get("https://api.github.com/users/marshallhouston/starred?access_token=#{@token}")
+    response = Faraday.get("https://api.github.com/users/#{@username}/starred?access_token=#{@token}")
     JSON.parse(response.body, symbolize_names: true)
   end
-  
+
 end

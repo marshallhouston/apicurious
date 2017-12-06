@@ -4,7 +4,8 @@ class GithubUser
               :picture,
               :repository_count,
               :number_of_followers,
-              :following_other_users_count
+              :following_other_users_count,
+              :starred_repos
 
   def initialize(attrs = {})
     @username = attrs[:login]
@@ -15,7 +16,11 @@ class GithubUser
   end
 
   def starred_repo_count
-    
+    starred_repos.count
+  end
+
+  def add_starred_repos(starred_repos)
+    @starred_repos = starred_repos
   end
 
 end
