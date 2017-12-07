@@ -10,8 +10,7 @@ feature "As an authenticated user" do
       click_on "Starred"
 
       within ".starred-repos" do
-        expect(page).to have_css(".repo-owner")
-        expect(page).to have_css(".repo-name")
+        expect(page).to have_css(".repo-full_name")
         expect(page).to have_css(".repo-description")
         expect(page).to have_css(".repo-language")
         expect(page).to have_css(".last-updated")

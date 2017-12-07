@@ -38,7 +38,7 @@ def stub_omniauth
        "bio"=>"I am a former middle school teacher with six years of experience in the K-12 education space finding my way in the world of development.",
        "public_repos"=>42,
        "public_gists"=>15,
-       "followers"=>2,
+       "followers"=>3,
        "following"=>6,
        "created_at"=>"2016-12-21T15:50:25Z",
        "updated_at"=>"2017-12-05T15:13:52Z",
