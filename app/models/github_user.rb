@@ -13,13 +13,16 @@ class GithubUser
     @following_other_users_count = attrs[:following]
   end
 
-  def followers
+  def followers(current_user)
     #collection of github user objects that are based on this user
-
+    followers = GithubService.new(current_user).followers
+    followers.map do |follower|
+      Follower.new(follower)
+    end
   end
 
-  def following
-    #collection of github user objects based on this specific user
-  end
+  # def following
+  #   #collection of github user objects based on this specific user
+  # end
 
 end
