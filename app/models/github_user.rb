@@ -26,3 +26,14 @@ class GithubUser
   # end
 
 end
+
+#### no
+
+# def initialize(user)
+# now that you're taking in a user, you can make the github service call inside this initialize?
+
+#   @username = attrs[:login]
+#   @repository_count = attrs[:public_repos]
+#   @number_of_followers = attrs[:followers]
+#   @following_other_users_count = attrs[:following]
+# end

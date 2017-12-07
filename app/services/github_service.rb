@@ -35,7 +35,7 @@ class GithubService
   end
 
   private
-    attr_reader :conn, :username
+    attr_reader :conn #, :username
 
     def get_json(url)
       response = conn.get(url)

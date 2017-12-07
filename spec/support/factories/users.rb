@@ -1,6 +1,8 @@
 FactoryBot.define do
   factory :user do
-    sequence :uid { Faker::Number.number(10)}
-    sequence :username { |n| "Username#{n}"  }
+    uid "24700836"
+    username "marshallhouston"
+    token ENV['github_access_token']
+    picture "https://avatars1.githubusercontent.com/u/24700836?v=4"
   end
 end
