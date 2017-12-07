@@ -11,9 +11,11 @@ describe GithubService do
   end
 
   context "instance methods" do
+
     context "#user_profile" do
       it "returns user information" do
         VCR.use_cassette("GithubService#user_profile") do
+
           profile_info = subject.user_profile
 
           expect(profile_info).to be_a Hash
@@ -21,6 +23,22 @@ describe GithubService do
         end
       end
     end
+
+    context "#user_starred_repos" do
+      it "returns repositories starred by the user" do
+        VCR.use_cassette("GithubService#user_starred_repos") do
+
+          starred_repos = subject.user_starred_repos
+          starred_repo = starred_repos.first
+
+          expect(starred_repos).to be_a Array
+          expect(starred_repos.count).to eq 6
+          expect(starred_repo).to be_a Hash
+          expect(starred_repo[:name]).to eq "rales-engine"
+        end
+      end
+    end
+
   end
 end
 
