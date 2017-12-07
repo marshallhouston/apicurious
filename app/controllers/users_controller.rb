@@ -3,11 +3,8 @@ class UsersController < ApplicationController
   before_action :current_user, only: [:show]
 
   def show
-    # github user
-    # starred repositories
-
     @github_user = github_user
-    @github_user.add_starred_repos(github_service.user_starred_repos)
+    @starred_repos = StarredRepository.all_repositories(current_user)
   end
 
   private
@@ -21,14 +18,7 @@ class UsersController < ApplicationController
   end
 
   def github_service
-    @github_service ||= GithubService.new(token, username)
+    @github_service ||= GithubService.new(current_user)
   end
 
-  def token
-    current_user.token
-  end
-
-  def username
-    current_user.username
-  end
 end

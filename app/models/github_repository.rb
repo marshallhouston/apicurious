@@ -9,8 +9,8 @@ class GithubRepository
     @repo_url = attrs[:html_url]
   end
 
-  def self.all_repositories(token, username)
-    repos = GithubService.new(token, username).user_repos
+  def self.all_repositories(user)
+    repos = GithubService.new(user).user_repos
     repos.map do |raw_repository|
       GithubRepository.new(raw_repository)
     end

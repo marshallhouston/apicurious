@@ -2,7 +2,7 @@ require 'rails_helper'
 
 feature "A visitor can login" do
   scenario "using github credentials" do
-    VCR.use_cassette("user_login") do
+    VCR.use_cassette("user_login_github_credentials") do
       stub_omniauth
 
       visit root_path

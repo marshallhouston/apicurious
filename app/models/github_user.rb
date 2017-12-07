@@ -4,8 +4,7 @@ class GithubUser
               :picture,
               :repository_count,
               :number_of_followers,
-              :following_other_users_count,
-              :starred_repos
+              :following_other_users_count
 
   def initialize(attrs = {})
     @username = attrs[:login]
@@ -14,12 +13,13 @@ class GithubUser
     @following_other_users_count = attrs[:following]
   end
 
-  def starred_repo_count
-    starred_repos.count
+  def followers
+    #collection of github user objects that are based on this user
+
   end
 
-  def add_starred_repos(starred_repos)
-    @starred_repos = starred_repos
+  def following
+    #collection of github user objects based on this specific user
   end
 
 end

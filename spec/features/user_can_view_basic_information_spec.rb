@@ -3,7 +3,9 @@ require 'rails_helper'
 describe "As an authenticated user" do
   describe "when I visit my profile page" do
     it "I see my user github information" do
-      VCR.use_cassette("view profile information") do
+      # VCR.use_cassette("view profile information") do
+      VCR.use_cassette("user_sees_github_profile_information") do
+
         stub_omniauth
 
         visit root_path

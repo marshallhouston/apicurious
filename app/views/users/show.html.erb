@@ -10,7 +10,7 @@
   <p><%= link_to "Repositories", user_repositories_path(current_user) %> <%= @github_user.repository_count %></p>
   </div>
   <div class="starred_repos">
-    <p><%= link_to "Starred", user_starred_index_path(current_user) %> <%= @github_user.starred_repo_count %></p>
+    <p><%= link_to "Starred", user_starred_index_path(current_user) %> <%= @starred_repos.count %></p>
   </div>
   <div class="followers">
     <p>Followers <%= @github_user.number_of_followers %></p>

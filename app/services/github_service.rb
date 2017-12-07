@@ -1,32 +1,37 @@
 class GithubService
 
-  def initialize(token, username)
-    @username = username
+  def initialize(user)
+    @username = user.username
     @conn = Faraday.new(url: "https://api.github.com") do |faraday|
-      faraday.headers['access_token'] = token
+      # faraday.headers['access_token'] = user.token
+      faraday.params[:access_token] = user.token
       faraday.adapter Faraday.default_adapter
     end
   end
 
   def user_profile
-    get_json("/users/#{username}")
-    # get_json("/user") will work if you have the access_token as parameters, but it doesn't work if you have the access token in the header
+    # get_json("/users/#{username}") #access token in header
+    get_json("/user") #access_token as params
   end
 
   def user_starred_repos
-    get_json("/users/#{username}/starred")
+    # get_json("/users/#{username}/starred") #access token in header
+    get_json("/user/starred") #access_token as params
   end
 
   def user_repos
-    get_json("/users/#{username}/repos")
+    # get_json("/users/#{username}/repos") #access token in header
+    get_json("/user/repos") #access token as params
   end
 
   def followers
-    get_json("/users/#{username}/followers")
+    # get_json("/users/#{username}/followers") #access token in headers
+    get_json("/user/followers") #access token in params
   end
 
   def following
-    get_json("/users/#{username}/following")
+    # get_json("/users/#{username}/following") #access token in headers
+    get_json("/user/following") #access token in params
   end
 
   private

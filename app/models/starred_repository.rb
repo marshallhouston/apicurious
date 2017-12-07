@@ -16,8 +16,8 @@ class StarredRepository
     @repo_url = attrs[:html_url]
   end
 
-  def self.all_repositories(token, username)
-    starred_repos = GithubService.new(token, username).user_starred_repos
+  def self.all_repositories(user)
+    starred_repos = GithubService.new(user).user_starred_repos
     starred_repos.map do |raw_repository|
       StarredRepository.new(raw_repository)
     end
