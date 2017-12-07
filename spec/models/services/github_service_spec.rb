@@ -9,6 +9,19 @@ describe GithubService do
       expect(subject).to be_a GithubService
     end
   end
+
+  context "instance methods" do
+    context "#user_profile" do
+      it "returns user information" do
+        VCR.use_cassette("GithubService#user_profile") do
+          profile_info = subject.user_profile
+
+          expect(profile_info).to be_a Hash
+          expect(profile_info[:login]).to eq("marshallhouston")
+        end
+      end
+    end
+  end
 end
 
 
