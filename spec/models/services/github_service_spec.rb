@@ -39,6 +39,52 @@ describe GithubService do
       end
     end
 
+    context "#user_repos" do
+      it "returns all repositories for the user" do
+        VCR.use_cassette("GithubService#user_repos") do
+
+          repos = subject.user_repos
+          repo = repos.first
+
+          expect(repos).to be_a Array
+          expect(repos.count).to eq 30
+          expect(repo).to be_a Hash
+          expect(repo[:name]).to eq "bike-share"
+          expect(repo[:language]).to eq "Ruby"
+        end
+      end
+    end
+
+    context "#followers" do
+      it "returns all followers for the user" do
+        VCR.use_cassette("GithubService#followers") do
+
+          followers = subject.followers
+          follower = followers.first
+
+          expect(followers).to be_a Array
+          expect(followers.count).to eq 3
+          expect(follower).to be_a Hash
+          expect(follower[:login]).to eq "PlanetEfficacy"
+        end
+      end
+    end
+
+    context "#following" do
+      it "returns all people the user follow" do
+        VCR.use_cassette("GithubService#following") do
+
+          following = subject.following
+          followed_person = following.first
+
+          expect(following).to be_a Array
+          expect(following.count).to eq 6
+          expect(followed_person).to be_a Hash
+          expect(followed_person[:login]).to eq "PlanetEfficacy"
+        end
+      end
+    end
+
   end
 end
 

@@ -1,0 +1,75 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.github.com/user/followers?access_token=<GITHUB_SECRET>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.12.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Thu, 07 Dec 2017 21:38:47 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4988'
+      X-Ratelimit-Reset:
+      - '1512685288'
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      Etag:
+      - W/"47bb85c041208210a15747fe4344f365"
+      X-Oauth-Scopes:
+      - repo, user
+      X-Accepted-Oauth-Scopes:
+      - ''
+      X-Oauth-Client-Id:
+      - "<GITHUB_CLIENT_ID>"
+      X-Github-Media-Type:
+      - github.v3; format=json
+      Access-Control-Expose-Headers:
+      - ETag, Link, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Security-Policy:
+      - default-src 'none'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Runtime-Rack:
+      - '0.038081'
+      X-Github-Request-Id:
+      - D30E:31B1:D49CEB:239E57D:5A29B4E7
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"login":"PlanetEfficacy","id":15135934,"avatar_url":"https://avatars3.githubusercontent.com/u/15135934?v=4","gravatar_id":"","url":"https://api.github.com/users/PlanetEfficacy","html_url":"https://github.com/PlanetEfficacy","followers_url":"https://api.github.com/users/PlanetEfficacy/followers","following_url":"https://api.github.com/users/PlanetEfficacy/following{/other_user}","gists_url":"https://api.github.com/users/PlanetEfficacy/gists{/gist_id}","starred_url":"https://api.github.com/users/PlanetEfficacy/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/PlanetEfficacy/subscriptions","organizations_url":"https://api.github.com/users/PlanetEfficacy/orgs","repos_url":"https://api.github.com/users/PlanetEfficacy/repos","events_url":"https://api.github.com/users/PlanetEfficacy/events{/privacy}","received_events_url":"https://api.github.com/users/PlanetEfficacy/received_events","type":"User","site_admin":false},{"login":"Maxscores","id":29938166,"avatar_url":"https://avatars1.githubusercontent.com/u/29938166?v=4","gravatar_id":"","url":"https://api.github.com/users/Maxscores","html_url":"https://github.com/Maxscores","followers_url":"https://api.github.com/users/Maxscores/followers","following_url":"https://api.github.com/users/Maxscores/following{/other_user}","gists_url":"https://api.github.com/users/Maxscores/gists{/gist_id}","starred_url":"https://api.github.com/users/Maxscores/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/Maxscores/subscriptions","organizations_url":"https://api.github.com/users/Maxscores/orgs","repos_url":"https://api.github.com/users/Maxscores/repos","events_url":"https://api.github.com/users/Maxscores/events{/privacy}","received_events_url":"https://api.github.com/users/Maxscores/received_events","type":"User","site_admin":false},{"login":"wiseemily88","id":28613896,"avatar_url":"https://avatars2.githubusercontent.com/u/28613896?v=4","gravatar_id":"","url":"https://api.github.com/users/wiseemily88","html_url":"https://github.com/wiseemily88","followers_url":"https://api.github.com/users/wiseemily88/followers","following_url":"https://api.github.com/users/wiseemily88/following{/other_user}","gists_url":"https://api.github.com/users/wiseemily88/gists{/gist_id}","starred_url":"https://api.github.com/users/wiseemily88/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/wiseemily88/subscriptions","organizations_url":"https://api.github.com/users/wiseemily88/orgs","repos_url":"https://api.github.com/users/wiseemily88/repos","events_url":"https://api.github.com/users/wiseemily88/events{/privacy}","received_events_url":"https://api.github.com/users/wiseemily88/received_events","type":"User","site_admin":false}]'
+    http_version: 
+  recorded_at: Thu, 07 Dec 2017 21:38:47 GMT
+recorded_with: VCR 4.0.0
