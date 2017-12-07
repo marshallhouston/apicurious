@@ -3,7 +3,8 @@ class GithubService
   def initialize(token, username)
     @username = username
     @conn = Faraday.new(url: "https://api.github.com") do |faraday|
-      faraday.params[:access_token] = token
+      faraday.headers[:access_token] = token
+      # faraday.params[:access_token] = token
       faraday.adapter Faraday.default_adapter
     end
   end

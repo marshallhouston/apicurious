@@ -7,5 +7,6 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show] do
     resources :repositories, only: [:index]
+    resources :starred, only: [:index]
   end
 end

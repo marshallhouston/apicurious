@@ -1,0 +1,13 @@
+<div class="starred-repos starred-repos-container">
+  <ul class="repositories-list">
+    <% @starred_repos.each do |repository| %>
+    <div class="repository-details">
+      <li class="repo-owner"> <%= repository.owner %></li>
+      <li class="repo-name"> <%=link_to "#{repository.name}", repository.repo_url %></li>
+      <li class="repo-description"> <%= repository.description %></li>
+      <li class="repo-language"> <%= repository.language %></li>
+      <li class="last-updated"> <%= repository.last_updated  %></li>
+    </div>
+    <% end %>
+  </ul>
+</div>

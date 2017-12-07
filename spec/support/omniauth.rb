@@ -9,7 +9,7 @@ def stub_omniauth
      "name"=>"Marshall Houston",
      "image"=>"https://avatars1.githubusercontent.com/u/24700836?v=4",
      "urls"=>{"GitHub"=>"https://github.com/marshallhouston", "Blog"=>""}},
-   "credentials"=>{"token"=>"adfs23r2342", "expires"=>false},
+   "credentials"=>{"token"=>ENV['github_access_token'], "expires"=>false},
    "extra"=>
     {"raw_info"=>
       {"login"=>"marshallhouston",
