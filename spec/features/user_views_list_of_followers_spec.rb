@@ -11,7 +11,7 @@ feature "As an authenticated user" do
 
         click_on "Followers"
 
-        within ".followers" do
+        within ".followers-container" do
           expect(page).to have_content("wiseemily88")
           expect(page).to have_content("Maxscores")
           expect(page).to have_content("PlanetEfficacy")
