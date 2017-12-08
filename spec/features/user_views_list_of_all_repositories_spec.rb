@@ -10,7 +10,7 @@ feature "As an authenticated user" do
 
       click_on "Repositories"
 
-      within ".repositories" do
+      within ".repositories-container" do
         expect(page).to have_css(".repo-name")
         expect(page).to have_content("activerecord_exploration")
         expect(page).to have_css(".repo-language")
