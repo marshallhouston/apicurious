@@ -14,15 +14,19 @@ class GithubUser
   end
 
   def followers(current_user)
-    #collection of github user objects that are based on this user
+    #collection of follower objects based on this specific user
     followers = GithubService.new(current_user).detailed_follower_info
     followers.map do |follower|
       Follower.new(follower)
     end
   end
 
-  # def following
-  #   #collection of github user objects based on this specific user
-  # end
+  def following(current_user)
+    #collection of followed objects based on this specific user
+    following = GithubService.new(current_user).detailed_following_info
+    following.map do |followed_person|
+      Followed.new(followed_person)
+    end
+  end
 
 end
