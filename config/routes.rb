@@ -9,5 +9,6 @@ Rails.application.routes.draw do
     resources :repositories, only: [:index]
     resources :starred, only: [:index]
     resources :followers, only: [:index]
+    resources :followed, only: [:index]
   end
 end

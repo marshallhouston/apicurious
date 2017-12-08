@@ -8,16 +8,17 @@ class FollowersController < ApplicationController
 
   private
 
-  def github_user
-    @github_user ||= GithubUser.new(user_profile)
+  def github_service
+    @github_service ||= GithubService.new(current_user)
   end
 
   def user_profile
     github_service.user_profile
   end
 
-  def github_service
-    @github_service ||= GithubService.new(current_user)
+  def github_user
+    @github_user ||= GithubUser.new(user_profile)
   end
+
 
 end
