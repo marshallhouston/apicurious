@@ -1,0 +1,28 @@
+.sidebar-container {
+  display: inline;
+  margin-right: 0;
+  aside {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    padding-left: 50px;
+    padding-top: 20px;
+
+    .user-info-item {
+      width: 200px;
+      margin: 2px 2px 2px 2px;
+      color: rgb(102,102,102);
+      h3 {
+        color: black;
+        font-weight: bold;
+      }
+    }
+
+    img {
+      width: 200px;
+      display: flex;
+      justify-content: center;
+      border-radius: 6px;
+    }
+  }
+}

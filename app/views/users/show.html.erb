@@ -1,35 +1,4 @@
-<aside class="user-description user-description-sidebar">
-  <div class="profile_picture">
-    <%= image_tag(current_user.picture, alt: "#{@github_user.username}'s profile picture", class: 'img')%>
-  </div>
-  <div class="name">
-    <h3> <%= current_user.name %> </h3>
-  </div>
-  <div class="username">
-    <h5> <%= current_user.username %> </h5>
-  </div>
-  <div class="bio">
-    <p> <%= current_user.bio %> </p>
-  </div>
-  <div class="location">
-    <p> <%= current_user.location %> </p>
-  </div>
-  <div class="email">
-    <p> <%= current_user.email %> </p>
-  </div>
-</aside>
-
-<div class="user_info">
-  <div class="repositories">
-  <p><%= link_to "Repositories", user_repositories_path(current_user) %> <%= @github_user.repository_count %></p>
-  </div>
-  <div class="starred_repos">
-    <p><%= link_to "Starred", user_starred_index_path(current_user) %> <%= @starred_repos.count %></p>
-  </div>
-  <div class="followers">
-    <p><%= link_to "Followers", user_followers_path(current_user) %> <%= @github_user.number_of_followers %></p>
-  </div>
-  <div class="following">
-    <p><%= link_to "Following", user_followed_index_path(current_user) %> <%= @github_user.following_other_users_count %></p>
-  </div>
+<div class="container">
+<%= render 'layouts/user_info' %>
+<%= render 'layouts/info_bar' %>
 </div>

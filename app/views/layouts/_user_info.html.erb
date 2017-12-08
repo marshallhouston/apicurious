@@ -1,0 +1,22 @@
+<div class='sidebar-container'>
+  <aside class="user-description user-description-sidebar">
+    <div class="profile_picture">
+      <%= image_tag(current_user.picture, alt: "#{current_user.username}'s profile picture", class: 'img')%>
+    </div>
+    <div class="user-info-item name">
+      <h3> <%= current_user.name %> </h3>
+    </div>
+    <div class="user-info-item username">
+      <h5> <%= current_user.username %> </h5>
+    </div>
+    <div class="user-info-item bio">
+      <p> <%= current_user.bio %> </p>
+    </div>
+    <div class="user-info-item location">
+      <p> <%= current_user.location %> </p>
+    </div>
+    <div class="user-info-item email">
+      <p> <%= current_user.email %> </p>
+    </div>
+  </aside>
+</div>

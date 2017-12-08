@@ -21,6 +21,19 @@ body {
   margin: 0;
 }
 
+.container {
+  display: flex;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.followed-people-container, .followers-container {
+  width: 500px;
+}
+
 a {
-  text-decoration: none; 
+  text-decoration: none;
 }

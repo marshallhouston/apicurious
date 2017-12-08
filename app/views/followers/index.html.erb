@@ -1,13 +1,22 @@
-<div class="followers followers-container">
-  <ul class="followers-list">
-    <% @followers.each do |follower| %>
-    <div class="follower-details">
-      <%= image_tag(follower.picture, alt: "#{follower.username}'s profile picture", class: 'img')%>
-      <li class="follower-full_name"> <%= link_to "#{follower.full_name}", follower.html_url %></li>
-      <li class="follower-username"> <%= link_to "#{follower.username}", follower.html_url %></li>
-      <li class="follower-bio"> <%= follower.bio %></li>
-      <li class="follower-location"> <%= follower.location %></li>
+<div class="container">
+
+    <%= render 'layouts/user_info' %>
+    <div class="main-container">
+
+      <%= render 'layouts/info_bar' %>
+      <div class="followers followers-container">
+
+      <ul class="followers-list">
+        <% @followers.each do |follower| %>
+        <div class="follower-details">
+          <%= image_tag(follower.picture, alt: "#{follower.username}'s profile picture", class: 'img')%>
+          <li class="follower-full_name"> <%= link_to "#{follower.full_name}", follower.html_url %></li>
+          <li class="follower-username"> <%= link_to "#{follower.username}", follower.html_url %></li>
+          <li class="follower-bio"> <%= follower.bio %></li>
+          <li class="follower-location"> <%= follower.location %></li>
+        </div>
+        <% end %>
+      </ul>
     </div>
-    <% end %>
-  </ul>
+  </div>
 </div>

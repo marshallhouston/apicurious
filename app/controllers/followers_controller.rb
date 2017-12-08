@@ -3,7 +3,9 @@ class FollowersController < ApplicationController
   before_action :current_user, only: [:index]
 
   def index
+    @github_user = github_user
     @followers = github_user.followers(current_user)
+    @starred_repos = StarredRepository.all_repositories(current_user)
   end
 
   private

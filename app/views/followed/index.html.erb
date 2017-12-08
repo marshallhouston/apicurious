@@ -1,13 +1,19 @@
-<div class="followed followed-people-container">
-  <ul class="followed-list">
-    <% @followed_people.each do |followed_person| %>
-    <div class="followed-details">
-      <%= image_tag(followed_person.picture, alt: "#{followed_person.username}'s profile picture", class: 'img')%>
-      <li class="followed-full_name"> <%= link_to "#{followed_person.full_name}", followed_person.html_url %></li>
-      <li class="followed-username"> <%= link_to "#{followed_person.username}", followed_person.html_url %></li>
-      <li class="followed-bio"> <%= followed_person.bio %></li>
-      <li class="followed-location"> <%= followed_person.location %></li>
+<div class="container">
+  <%= render 'layouts/user_info' %>
+  <div class="main-container">
+    <%= render 'layouts/info_bar' %>
+    <div class="followed followed-people-container">
+      <ul class="followed-list">
+        <% @followed_people.each do |followed_person| %>
+        <div class="followed-details">
+          <%= image_tag(followed_person.picture, alt: "#{followed_person.username}'s profile picture", class: 'img')%>
+          <li class="followed-full_name"> <%= link_to "#{followed_person.full_name}", followed_person.html_url %></li>
+          <li class="followed-username"> <%= link_to "#{followed_person.username}", followed_person.html_url %></li>
+          <li class="followed-bio"> <%= followed_person.bio %></li>
+          <li class="followed-location"> <%= followed_person.location %></li>
+        </div>
+        <% end %>
+      </ul>
     </div>
-    <% end %>
-  </ul>
+  </div>
 </div>

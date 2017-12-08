@@ -1,12 +1,20 @@
-<div class="starred-repos starred-repos-container">
-  <ul class="repositories-list">
-    <% @starred_repos.each do |repository| %>
-    <div class="repository-details">
-      <li class="repo-full_name"> <%= link_to "#{repository.full_name}", repository.repo_url %></li>
-      <li class="repo-description"> <%= repository.description %></li>
-      <li class="repo-language"> <%= repository.language %></li>
-      <li class="last-updated"> <%= repository.last_updated  %></li>
+<div class="container">
+  <%= render 'layouts/user_info' %>
+  <div class="main-container">
+
+    <%= render 'layouts/info_bar' %>
+
+    <div class="starred-repos starred-repos-container">
+      <ul class="repositories-list">
+        <% @starred_repos.each do |repository| %>
+        <div class="repository-details">
+          <li class="repo-full_name"> <%= link_to "#{repository.full_name}", repository.repo_url %></li>
+          <li class="repo-description"> <%= repository.description %></li>
+          <li class="repo-language"> <%= repository.language %></li>
+          <li class="last-updated"> <%= repository.last_updated  %></li>
+        </div>
+        <% end %>
+      </ul>
     </div>
-    <% end %>
-  </ul>
+  </div>
 </div>
