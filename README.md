@@ -36,7 +36,7 @@ Change directory to apicurious and run the following commands:
  `rake db:create db:migrate`  
 
 Run the server:
- `rails server`  
+ `rails s`  
 
 Using a browser, go to http://localhost:3000 and you'll be prompted to login using your Github account.
 
