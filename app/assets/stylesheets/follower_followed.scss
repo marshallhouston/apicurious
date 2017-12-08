@@ -1,0 +1,50 @@
+.followers-list, .followed-list {
+  margin-bottom: 5px;
+}
+
+.follower-followed-md {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid grey;
+  width: 665px;
+  margin-bottom: 8px;
+  .img-sm {
+    height: 50px;
+    border-radius: 3px;
+  }
+  .follow-specific-details {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+    .follow-name-info {
+      display: flex;
+      flex-direction: row;
+      align-items: baseline;
+      font-size: 16px;
+      a {
+        color: rgb(102,102,102);
+        &:hover {
+          color: rgb(33, 103, 207);
+
+        }
+      }
+      .follow-full_name {
+        padding-right: 10px;
+        font-size: 14px;
+      }
+      .follow-username {
+        padding-left: 10px;
+      }
+  }
+
+    .follow-bio {
+      font-size: 12px;
+      color: rgb(102,102,102);
+    }
+
+    .follow-location {
+      color: rgb(102,102,102);
+      font-size: 12px;
+    }
+  }
+}

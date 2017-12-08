@@ -1,22 +1,25 @@
 <div class="container">
-
-    <%= render 'layouts/user_info' %>
-    <div class="main-container">
-
-      <%= render 'layouts/info_bar' %>
-      <div class="followers followers-container">
-
+  <%= render 'layouts/user_info' %>
+  <div class="main-container">
+    <%= render 'layouts/info_bar' %>
+    <div class="followers followers-container">
       <ul class="followers-list">
         <% @followers.each do |follower| %>
-        <div class="follower-details">
-          <%= image_tag(follower.picture, alt: "#{follower.username}'s profile picture", class: 'img')%>
-          <li class="follower-full_name"> <%= link_to "#{follower.full_name}", follower.html_url %></li>
-          <li class="follower-username"> <%= link_to "#{follower.username}", follower.html_url %></li>
-          <li class="follower-bio"> <%= follower.bio %></li>
-          <li class="follower-location"> <%= follower.location %></li>
-        </div>
-        <% end %>
-      </ul>
+        <div class="follower-details follower-followed-md">
+          <div class="follow-img-container">
+            <%= image_tag(follower.picture, alt: "#{follower.username}'s profile picture", class: 'img img-sm')%>
+          </div>
+          <div class="follow-specific-details">
+            <div class="follow-name-info">
+              <h2 class="follower-full_name follow-full_name"> <%= link_to "#{follower.full_name}", follower.html_url %></h5>
+                <h5 class="follower-username follow-username"> <%= link_to "#{follower.username}", follower.html_url %></h5>
+              </div>
+              <p class="follower-bio follow-bio"> <%= follower.bio %></p>
+              <p class="follower-location follow-location"> <%= follower.location %></p>
+            </div>
+          </div>
+          <% end %>
+        </ul>
+      </div>
     </div>
   </div>
-</div>

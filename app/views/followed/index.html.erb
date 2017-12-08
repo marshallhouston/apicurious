@@ -5,12 +5,18 @@
     <div class="followed followed-people-container">
       <ul class="followed-list">
         <% @followed_people.each do |followed_person| %>
-        <div class="followed-details">
-          <%= image_tag(followed_person.picture, alt: "#{followed_person.username}'s profile picture", class: 'img')%>
-          <li class="followed-full_name"> <%= link_to "#{followed_person.full_name}", followed_person.html_url %></li>
-          <li class="followed-username"> <%= link_to "#{followed_person.username}", followed_person.html_url %></li>
-          <li class="followed-bio"> <%= followed_person.bio %></li>
-          <li class="followed-location"> <%= followed_person.location %></li>
+        <div class="followed-details follower-followed-md">
+          <div class="follow-img-container">
+            <%= image_tag(followed_person.picture, alt: "#{followed_person.username}'s profile picture", class: 'img img-sm')%>
+          </div>
+          <div class="follow-specific-details">
+            <div class="follow-name-info">
+              <h3 class="followed-full_name follow-full_name"> <%= link_to "#{followed_person.full_name}", followed_person.html_url %></h3>
+              <h5 class="followed-username follow-username"> <%= link_to "#{followed_person.username}", followed_person.html_url %></h5>
+            </div>
+            <p class="followed-bio follow-bio"> <%= followed_person.bio %></p>
+            <p class="followed-location follow-location"> <%= followed_person.location %></p>
+          </div>
         </div>
         <% end %>
       </ul>
