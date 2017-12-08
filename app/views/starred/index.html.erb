@@ -5,16 +5,16 @@
     <%= render 'layouts/info_bar' %>
 
     <div class="starred-repos starred-repos-container">
-      <ul class="repositories-list">
+      <div class="repositories-list">
         <% @starred_repos.each do |repository| %>
         <div class="repository-details">
-          <li class="repo-full_name"> <%= link_to "#{repository.full_name}", repository.repo_url %></li>
-          <li class="repo-description"> <%= repository.description %></li>
-          <li class="repo-language"> <%= repository.language %></li>
-          <li class="last-updated"> <%= repository.last_updated  %></li>
+          <h2 class="repo-name"> <%= link_to "#{repository.full_name}", repository.repo_url %></h2>
+          <h5 class="repo-description"> <%= repository.description %></h5>
+          <p class="repo-language"> <%= repository.language %></p>
+          <p class="last-updated"> <%= repository.last_updated  %></p>
         </div>
         <% end %>
-      </ul>
+      </div>
     </div>
   </div>
 </div>
