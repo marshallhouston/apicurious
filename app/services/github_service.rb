@@ -21,7 +21,10 @@ class GithubService
 
   def user_repos
     # get_json("/users/#{username}/repos") #access token in header
-    get_json("/user/repos") #access token as params
+    get_json("/user/repos?per_page=100&affiliation=owner") #access token as params
+
+    ##I'd like to add a parameter of per_page and set it equal to 100.
+    # params[:per_page] = 100
   end
 
   def followers

@@ -47,9 +47,9 @@ describe GithubService do
           repo = repos.first
 
           expect(repos).to be_a Array
-          expect(repos.count).to eq 30
+          expect(repos.count).to eq 42
           expect(repo).to be_a Hash
-          expect(repo[:name]).to eq "bike-share"
+          expect(repo[:name]).to eq "activerecord_exploration"
           expect(repo[:language]).to eq "Ruby"
         end
       end
