@@ -10,8 +10,11 @@
         <div class="repository-details">
           <h2 class="repo-name"> <%= link_to "#{repository.full_name}", repository.repo_url %></h2>
           <h5 class="repo-description"> <%= repository.description %></h5>
-          <p class="repo-language"> <%= repository.language %></p>
-          <p class="last-updated"> <%= repository.last_updated  %></p>
+          <div class="repo-bottom-container">
+
+            <p class="repo-language"> <%= repository.language %></p>
+            <p class="last-updated"> <%= repository.last_updated  %></p>
+          </div>
         </div>
         <% end %>
       </div>

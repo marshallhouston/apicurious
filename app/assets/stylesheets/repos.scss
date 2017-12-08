@@ -1,0 +1,14 @@
+.repository-details {
+  border-bottom: 1px solid grey;
+  padding-bottom: 5px;
+  .repo-bottom-container {
+    display: flex;
+    p {
+      margin: 2px 5px 2px 5px;
+    }
+  }
+  .repository-md {
+    padding-bottom: 25px;
+    margin-bottom: 5px;
+  }
+}
