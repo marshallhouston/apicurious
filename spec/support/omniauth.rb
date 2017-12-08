@@ -51,10 +51,3 @@ def stub_omniauth
        "plan"=>{"name"=>"free", "space"=>976562499, "collaborators"=>0, "private_repos"=>0}},
      "all_emails"=>[{"email"=>"mh@gmail.com", "primary"=>true, "verified"=>true, "visibility"=>"public"}]}})
 end
-
-   # OmniAuth.config.mock_auth[:github] = OmniAuth::AuthHash.new({
-   #   provider: 'github',
-   #   uid: '123545533',
-   #   extra: { raw_info: { login: "marshallhouston" } },
-   #   credentials: { token: "1325235abcdd", expires: false },
-   #   })

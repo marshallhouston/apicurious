@@ -4,21 +4,13 @@ class GithubUser
               :picture,
               :repository_count,
               :number_of_followers,
-              :following_other_users_count,
-              :name,
-              :bio,
-              :location,
-              :email
+              :following_other_users_count
 
   def initialize(attrs = {})
     @username = attrs[:login]
     @repository_count = attrs[:public_repos]
     @number_of_followers = attrs[:followers]
     @following_other_users_count = attrs[:following]
-    @name = attrs[:name]
-    @bio = attrs[:bio]
-    @location = attrs[:location]
-    @email = attrs[:email]
   end
 
   def followers(current_user)

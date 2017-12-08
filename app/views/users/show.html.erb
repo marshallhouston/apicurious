@@ -3,19 +3,19 @@
     <%= image_tag(current_user.picture, alt: "#{@github_user.username}'s profile picture", class: 'img')%>
   </div>
   <div class="name">
-    <h3> <%= @github_user.name %> </h3>
+    <h3> <%= current_user.name %> </h3>
   </div>
   <div class="username">
-    <h5> <%= @github_user.username %> </h5>
+    <h5> <%= current_user.username %> </h5>
   </div>
   <div class="bio">
-    <p> <%= @github_user.bio %> </p>
+    <p> <%= current_user.bio %> </p>
   </div>
   <div class="location">
-    <p> <%= @github_user.location %> </p>
+    <p> <%= current_user.location %> </p>
   </div>
   <div class="email">
-    <p> <%= @github_user.email %> </p>
+    <p> <%= current_user.email %> </p>
   </div>
 </aside>
 
