@@ -4,6 +4,13 @@ This is a github clone that implements Github oauth and consumes data from the g
 
 It is built using Ruby on Rails, tested with RSpec, and styled using HTML/CSS. TDD was used to drive development.
 
+<img src='http://i268.photobucket.com/albums/jj12/mrhouston3/apicurious/Screen%20Shot%202017-12-08%20at%209.30.56%20AM_zpstlsvidxz.png' >
+
+<img src='http://i268.photobucket.com/albums/jj12/mrhouston3/apicurious/Screen%20Shot%202017-12-08%20at%209.31.32%20AM_zpsnrwrkozh.png' >
+
+<img src='http://i268.photobucket.com/albums/jj12/mrhouston3/apicurious/Screen%20Shot%202017-12-08%20at%209.32.00%20AM_zps3gv0kqhv.png' >
+
+
 ## Features
 - User can authenticate using Omniauth
 - User can view basic information about their account
