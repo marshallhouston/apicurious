@@ -4,7 +4,7 @@ class Followed
               :picture,
               :html_url,
               :full_name,
-              :description,
+              :bio,
               :location
 
   def initialize(attrs = {})
@@ -12,7 +12,7 @@ class Followed
     @picture = attrs[:avatar_url]
     @html_url = attrs[:html_url]
     @full_name = attrs[:name]
-    @description = attrs[:bio]
+    @bio = attrs[:bio]
     @location = attrs[:location]
   end
 

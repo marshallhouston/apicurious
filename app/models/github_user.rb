@@ -4,17 +4,24 @@ class GithubUser
               :picture,
               :repository_count,
               :number_of_followers,
-              :following_other_users_count
+              :following_other_users_count,
+              :name,
+              :bio,
+              :location,
+              :email
 
   def initialize(attrs = {})
     @username = attrs[:login]
     @repository_count = attrs[:public_repos]
     @number_of_followers = attrs[:followers]
     @following_other_users_count = attrs[:following]
+    @name = attrs[:name]
+    @bio = attrs[:bio]
+    @location = attrs[:location]
+    @email = attrs[:email]
   end
 
   def followers(current_user)
-    #collection of follower objects based on this specific user
     followers = GithubService.new(current_user).detailed_follower_info
     followers.map do |follower|
       Follower.new(follower)
@@ -22,7 +29,6 @@ class GithubUser
   end
 
   def following(current_user)
-    #collection of followed objects based on this specific user
     following = GithubService.new(current_user).detailed_following_info
     following.map do |followed_person|
       Followed.new(followed_person)

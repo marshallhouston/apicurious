@@ -5,7 +5,7 @@
       <%= image_tag(followed_person.picture, alt: "#{followed_person.username}'s profile picture", class: 'img')%>
       <li class="followed-full_name"> <%= link_to "#{followed_person.full_name}", followed_person.html_url %></li>
       <li class="followed-username"> <%= link_to "#{followed_person.username}", followed_person.html_url %></li>
-      <li class="followed-description"> <%= followed_person.description %></li>
+      <li class="followed-bio"> <%= followed_person.bio %></li>
       <li class="followed-location"> <%= followed_person.location %></li>
     </div>
     <% end %>
