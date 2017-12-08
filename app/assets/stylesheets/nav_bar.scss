@@ -1,0 +1,24 @@
+nav {
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  padding-left: 5px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  background: rgb(37, 41, 46);
+  margin: 0;
+  a {
+    font-size: 14px;
+    color: rgba(255,255,255,0.75);
+    &:hover {
+      color: rgb(255,255,255);
+    }
+  }
+}
+
+.nav-link {
+  padding-top: 5px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+}

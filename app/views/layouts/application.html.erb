@@ -10,11 +10,25 @@
 
   <body>
     <nav>
+      <div class="nav-link">
+        <%= link_to "Pull requests", url_for("https://github.com/pulls") %>
+      </div>
+      <div class="nav-link">
+        <%= link_to "Issues", url_for("https://github.com/issues") %>
+      </div>
+      <div class="nav-link">
+        <%= link_to "Explore", url_for("https://github.com/explore") %>
+      </div>
+      <div class="nav-link">
+        <%= link_to "Marketplace", url_for("https://github.com/marketplace") %>
+      </div>
+      <div class="nav-link">
       <% if current_user %>
         <%= link_to "Logout", logout_path, method: :delete %>
       <% else %>
         <%= link_to "Login with Github", github_login_path %>
       <% end %>
+      </div>
     </nav>
     <%= yield %>
   </body>
